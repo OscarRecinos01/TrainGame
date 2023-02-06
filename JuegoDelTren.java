@@ -7,9 +7,8 @@ public class JuegoDelTren {
     private Tren tren;
     private Camino camino;
 
-    public JuegoDelTren(Jugador jugador, Tren tren) {
-        this.jugador = jugador;
-        this.tren = tren;
+    public JuegoDelTren() {
+        return;
     }
 
     public Jugador getJugador() {
@@ -24,7 +23,15 @@ public class JuegoDelTren {
         return camino;
     }
 
+    public void SetGame(){
+        jugador = new Jugador("Oscar", 30);
+        tren = new Tren();
+        camino = new Camino();
+        jugador.setTren(tren);
+    }
+
     public void IniciarJuego() {
+        System.out.println(this.tren.toString());
         int option = 0;
 
         do {
@@ -58,6 +65,7 @@ public class JuegoDelTren {
                 }
 
             } catch (Exception e) {
+                System.out.println(e);
                 System.out.println("Escribe un valor valido");
                 option = -1;
 

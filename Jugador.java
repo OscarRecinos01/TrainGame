@@ -34,6 +34,11 @@ public class Jugador{
     public Tren getTren() {
         return tren;
     }
+
+    public void setTren(Tren tren) {
+        this.tren = tren;
+    }
+    
     
     
 
