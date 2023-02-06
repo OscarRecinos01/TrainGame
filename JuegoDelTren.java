@@ -1,4 +1,4 @@
-package homework.code;
+package TrainGame;
 
 import java.util.Scanner;
 

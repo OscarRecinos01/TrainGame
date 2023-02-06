@@ -1,4 +1,4 @@
-package homework.code;
+package TrainGame;
 
 public abstract class Vagones {
     protected int cantidadRuedas;

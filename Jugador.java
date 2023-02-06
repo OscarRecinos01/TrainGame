@@ -1,4 +1,4 @@
-package homework.code;
+package TrainGame;
 
 public class Jugador{
     private Tren tren;
