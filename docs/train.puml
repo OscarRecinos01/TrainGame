@@ -1,0 +1,56 @@
+@startuml Name
+
+object juegoDelTren
+object nombre
+object tiempoABatir
+object jugador
+object camino
+object goal
+object tren
+object vagonPrincipal
+object vagones
+object ruedas
+object capacidadKg
+object distancia
+object vagonCarga
+object acelerar
+object pitar
+object frenar
+object avanzar
+object vagonPrincipalGoal
+object jugadorGoal
+object detenerse
+object tocarClaxon
+
+juegoDelTren *-- tren
+juegoDelTren *-- jugador
+juegoDelTren *-- camino
+
+jugador *-- jugadorGoal
+jugadorGoal <|-- tiempoABatir
+
+tren *-- vagones
+vagones <|-- vagonCarga
+vagones <|-- vagonPrincipal
+vagones *-- ruedas
+vagones *-- capacidadKg
+
+vagonPrincipal *-- vagonPrincipalGoal
+
+vagonPrincipalGoal <|-- tocarClaxon
+vagonPrincipalGoal <|-- acelerar
+vagonPrincipalGoal <|-- frenar
+
+tren *-- goal
+goal <|-- avanzar
+goal <|-- pitar
+goal <|-- detenerse
+
+camino *-- distancia
+
+jugador --> tren
+jugador *-- nombre
+
+
+
+@enduml
