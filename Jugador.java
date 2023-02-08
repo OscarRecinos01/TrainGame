@@ -1,15 +1,10 @@
 package TrainGame;
 
-public class Jugador{
-    private Tren tren;
-    private String nombre;
-    private int tiempoABatir;
+public abstract class Jugador{
+    protected Tren tren;
+    protected String nombre;
+    protected int tiempoABatir;
     
-    
-    public Jugador(String nombre, int tiempoABatir) {
-        this.nombre = nombre;
-        this.tiempoABatir = tiempoABatir;
-    }
 
     public void avanzar(){
         tren.avanzar();
@@ -17,7 +12,6 @@ public class Jugador{
     }
     public void frenar(){
         tren.detenerse();
-        
     }
     public void pitar(){
         tren.pitar();
@@ -39,7 +33,4 @@ public class Jugador{
         this.tren = tren;
     }
     
-    
-    
-
 }
